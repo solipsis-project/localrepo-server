@@ -2,12 +2,11 @@
 
 <img alt="logo" width="400" src="https://raw.githubusercontent.com/FurryCoders/Logos/main/logos/falocalrepo-server-transparent.png">
 
-# FALocalRepo-Server
+# LocalRepo-Server
 
-Web interface for [falocalrepo](https://pypi.org/project/falocalrepo/).
+Web interface for [localrepo](https://github.com/solipsis-project/LocalRepo). A fork of https://github.com/FurryCoders/falocalrepo-server.
 
-[![](https://img.shields.io/github/v/tag/FurryCoders/falocalrepo-server?label=github&sort=date&logo=github&color=blue)](https://github.com/FurryCoders/falocalrepo-server)
-[![](https://img.shields.io/pypi/v/falocalrepo-server?logo=pypi)](https://pypi.org/project/falocalrepo-server/)
+[![](https://img.shields.io/github/v/tag/solipsis-project/localrepo-server?label=github&sort=date&logo=github&color=blue)](https://github.com/solipsis-project/localrepo-server)
 [![](https://img.shields.io/pypi/pyversions/falocalrepo-server?logo=Python)](https://www.python.org)
 [![](https://img.shields.io/badge/Bootstrap-5.2.0-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 
@@ -15,17 +14,19 @@ Web interface for [falocalrepo](https://pypi.org/project/falocalrepo/).
 
 ## Installation & Requirements
 
-To install the program it is sufficient to use Python pip and get the package `falocalrepo-server`.
+To install the program it is sufficient to use Python pip.
 
 ```shell
-pip install falocalrepo-server
+git clone https://github.com/solipsis-project/localrepo-server
+git cd localrepo-server
+pip install -r .
 ```
 
 Python 3.10 or above is needed to run this program, all other dependencies are handled by pip during installation. For
 information on how to install Python on your computer, refer to the official
 website [Python.org](https://www.python.org/).
 
-For the program to run, a properly formatted database created by falocalrepo needs to be present in the same folder.
+For the program to run, a properly formatted database created by localrepo needs to be present in the same folder.
 
 The styling is based on the [Boostrap CSS framework](https://getbootstrap.com).
 
@@ -39,7 +40,7 @@ falocalrepo-server <database> [--host HOST] [--port PORT] [--ssl-cert SSL_CERT] 
                    [--redirect-http REDIRECT_PORT] [--auth <username>:<password>] [--precache] [--no-browser]
 ```
 
-The server needs one argument pointing at the location of a valid [falocalrepo](https://pypi.org/project/falocalrepo/)
+The server needs one argument pointing at the location of a valid [localrepo](https://github.com/solipsis-project/FALocalRepo)
 database and accepts optional arguments to manually set host, port, and an SSL certificate with key. By default, the
 server is run on 0.0.0.0:80 for HTTP (without certificate) and 0.0.0.0:443 for HTTPS (with certificate).
 
@@ -179,7 +180,7 @@ for users searches.
 The controls at the top of the page allow to query the database and control the visualisation of the results.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/search-form.png" width="600">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/search-form.png" width="600">
 </div>
 
 The _Search_ input allows to insert the search query.
@@ -203,7 +204,7 @@ The gear button opens the search settings, the question mark button shows a quic
 Under the search controls are the number of results and current page.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/search-nav.png" width="400">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/search-nav.png" width="400">
 </div>
 
 Under the results numbers are the page controls. _First_ leads to page 1, _Prev_ leads to the previous page, _Next_
@@ -215,7 +216,7 @@ date and author) will open the author's page. Submissions with more than one fil
 number of files in the upper right corner of the card.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/search-card.png" width="200">
+<img src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/search-card.png" width="200">
 </div>
 
 In list view, the results are presented in a table with the most important columns: ID, AUTHOR, DATE, and TITLE (
@@ -223,7 +224,7 @@ submissions and journals); USERNAME, FOLDERS, and ACTIVE (users). On small scree
 or removed.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/search-list.png" width="800">
+<img src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/search-list.png" width="800">
 </div>
 
 #### Compatibility with Fur Affinity Search
@@ -240,7 +241,7 @@ The query language used for this server is based on and improves the search synt
 website. Its basic elements are:
 
 * `@<field>` field specifier (e.g. `@title`), all database columns are available as search fields.
-  See [falocalrepo-database](https://pypi.org/project/falocalrepo-database/) for details on the available columns.
+  See [localrepo-database](https://github.com/solipsis-project/localrepo-database) for details on the available columns.
 * `()` parentheses, they can be used for better logic operations
 * `&` _AND_ logic operator, used between search terms
 * `|` _OR_ logic operator, used between search terms
@@ -336,7 +337,7 @@ Settings values are saved in the `SETTINGS` table with the `SERVER.SEARCH` setti
 ### User
 
 The user page shows information about submissions and journals related to a user (gallery, scraps, favorites, mentions,
-and journals) and what folders have been set for download. See [falocalrepo](https://pypi.org/project/falocalrepo/) for
+and journals) and what folders have been set for download. See [localrepo](https://github.com/solipsis-project/falocalrepo) for
 more details on this. The user's profile will be displayed if present in the database.
 
 Clicking on any of the counters opens the relevant results via the search interface, allowing to refine the search
@@ -356,7 +357,7 @@ When a submission has two or more files, a toolbar appears below the file sectio
 different files, show the files in a grid view, and enlarge non-image files (text, video, etc.).
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-file-switcher.png" width="200">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-file-switcher.png" width="200">
 </div>
 
 The metadata table contains clickable links to the user's page (see [User](#user) for details), tags, category, species,
@@ -369,7 +370,7 @@ Under the metadata table are a number of buttons that allow to access the submis
 counterpart, and navigate the other submissions from the author.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-submission.png" width="400">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-submission.png" width="400">
 </div>
 
 The download _File_ button downloads the submission file (if present). If more than one file is present, then the button
@@ -388,18 +389,18 @@ submissions together, and scraps submissions respectively.
 To view the currently selected submission file when scrolling down the page, the button in the lower right corner can be
 used to open the image in a floating overlay that will remain at the top of the page view.
 
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-submission-overlay.png" width="50">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-submission-overlay.png" width="50">
 
 The comments to the submission can be found below the description, and can be reached quickly by clicking on the
 floating comments button that appears in the lower right corner of the screen if the submission has comments.
 
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-comments-link.png" width="50">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-comments-link.png" width="50">
 
 Each comment contains the author (with a link to their user page), post date, and links to the comment itself and, if
 the comment is a reply, its parent comments.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/comment-card.png" width="400">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/comment-card.png" width="400">
 </div>
 
 The button furthest to the left (arrow pointing up and to the left) links to the first comment in a reply chain. The
@@ -417,7 +418,7 @@ Under the metadata table are a number of buttons that allow to download the jour
 and navigate the other journals from the same user.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-journal.png" width="400">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-journal.png" width="400">
 </div>
 
 The download _ZIP_ button generates a ZIP file containing the journal content HTML and metadata and comments in JSON
@@ -432,13 +433,13 @@ The _All_ button opens a search page with all the user's journals.
 The comments to the journal can be found below the journal text, and can be reached quickly by clicking on the floating
 comments button that appears in the lower right corner of the screen if the journal has comments.
 
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-comments-link.png" width="50">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-comments-link.png" width="50">
 
 Each comment contains the author (with a link to their user page), post date, and links to the comment itself and, if
 the comment is a reply, its parent comments.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/comment-card.png" width="400">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/comment-card.png" width="400">
 </div>
 
 The button furthest to the left (arrow pointing up and to the left) links to the first comment in a reply chain. The
@@ -451,9 +452,9 @@ When the database is in BBCode mode a new buttons appears along submission descr
 profiles to switch between the rendered HTML and the BBCode stored in the database.
 
 <div align="center">
-<img alt="" src="https://raw.githubusercontent.com/FurryCoders/falocalrepo-server/master/doc/buttons-bbcode.png" width="120">
+<img alt="" src="https://raw.githubusercontent.com/solipsis-project/localrepo-server/master/doc/buttons-bbcode.png" width="120">
 </div>
 
 _Note:_ the BBCode to HTML conversion is still a work in progress and some content may be rendered incorrectly; please
 open
-an [issue](https://github.com/FurryCoders/falocalrepo-server/issues) if you encounter any error :)
+an [issue](https://github.com/solipsis-project/localrepo-server/issues) if you encounter any error :)

@@ -1,32 +1,31 @@
 [tool.poetry]
-name = "falocalrepo-server"
+name = "localrepo-server"
 version = "3.3.3"
-description = "Web interface for falocalrepo."
-authors = ["Matteo Campinoti <matteo.campinoti94@gmail.com>"]
+description = "Web interface for localrepo. A fork of falocalrepo-server"
+authors = ["The Solipsis Project <the.solipsis.project@gmail.com>", "Matteo Campinoti <matteo.campinoti94@gmail.com>"]
 license = "EUPL-1.2"
 readme = "README.md"
-homepage = "https://github.com/FurryCoders/falocalrepo-server"
-repository = "https://github.com/FurryCoders/falocalrepo-server"
+homepage = "https://github.com/solipsis-project/localrepo-server"
+repository = "https://github.com/solipsis-project/localrepo-server"
 classifiers = [
     "Programming Language :: Python :: 3.10",
     "Operating System :: OS Independent",
     "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: End Users/Desktop",
 ]
 
 [tool.poetry.urls]
-"Source" = "https://github.com/FurryCoders/falocalrepo-server"
-"Changelog" = "https://github.com/FurryCoders/falocalrepo-server/blob/main/CHANGELOG.md"
-"Bug Reports" = "https://github.com/FurryCoders/falocalrepo-server/issues"
-"Download" = "https://pypi.org/project/falocalrepo-server/#files"
+"Source" = "https://github.com/solipsis-project/localrepo-server"
+"Changelog" = "https://github.com/solipsis-project/localrepo-server/blob/main/CHANGELOG.md"
+"Bug Reports" = "https://github.com/solipsis-project/localrepo-server/issues"
 
 [tool.poetry.scripts]
 falocalrepo-server = "falocalrepo_server.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-falocalrepo-database = "~5.4.3"
+localrepo-database = "~5.4.3"
 chardet = "^5.0.0"
 pillow = "^9.3.0"
 fastapi = "^0.87.0"
