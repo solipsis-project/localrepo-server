@@ -12,7 +12,7 @@ from click import option
 from click import pass_context
 from click.core import ParameterSource
 from click_help_colors import HelpColorsCommand
-from falocalrepo_database import Database
+from localrepo_database import Database
 
 from . import __name__ as __prog__name__
 from .__version__ import __version__

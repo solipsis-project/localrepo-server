@@ -29,9 +29,9 @@ from bs4 import BeautifulSoup
 from bs4 import NavigableString
 from bs4.element import Tag
 from chardet import detect as detect_encoding
-from falocalrepo_database.tables import JournalsColumns
-from falocalrepo_database.tables import SubmissionsColumns
-from falocalrepo_database.tables import UsersColumns
+from localrepo_database.tables import JournalsColumns
+from localrepo_database.tables import SubmissionsColumns
+from localrepo_database.tables import UsersColumns
 from fastapi import FastAPI
 from fastapi import Request
 from fastapi import Response

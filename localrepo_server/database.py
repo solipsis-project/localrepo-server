@@ -11,18 +11,18 @@ from re import split
 from re import sub
 from sqlite3 import DatabaseError
 
-from falocalrepo_database import Column
-from falocalrepo_database import Database as _Database
-from falocalrepo_database import Table
-from falocalrepo_database.selector import Selector
-from falocalrepo_database.selector import SelectorBuilder as Sb
-from falocalrepo_database.tables import JournalsColumns
-from falocalrepo_database.tables import SubmissionsColumns
-from falocalrepo_database.tables import UsersColumns
-from falocalrepo_database.tables import journals_table
-from falocalrepo_database.tables import submissions_table
-from falocalrepo_database.tables import users_table
-from falocalrepo_database.util import compare_version
+from localrepo_database import Column
+from localrepo_database import Database as _Database
+from localrepo_database import Table
+from localrepo_database.selector import Selector
+from localrepo_database.selector import SelectorBuilder as Sb
+from localrepo_database.tables import JournalsColumns
+from localrepo_database.tables import SubmissionsColumns
+from localrepo_database.tables import UsersColumns
+from localrepo_database.tables import journals_table
+from localrepo_database.tables import submissions_table
+from localrepo_database.tables import users_table
+from localrepo_database.util import compare_version
 
 default_sort: dict[str, str] = {submissions_table: "date", journals_table: "date", users_table: "username"}
 default_order: dict[str, str] = {submissions_table: "desc", journals_table: "desc", users_table: "asc"}
