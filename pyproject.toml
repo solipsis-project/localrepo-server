@@ -25,7 +25,7 @@ falocalrepo-server = "falocalrepo_server.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-localrepo-database = "~5.4.3"
+localrepo-database = {path = "../localrepo-database"}
 chardet = "^5.0.0"
 pillow = "^9.3.0"
 fastapi = "^0.87.0"
